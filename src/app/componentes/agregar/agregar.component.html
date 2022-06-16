@@ -1,0 +1,21 @@
+<div class="container">  
+    <form action=" ">
+        <div class="mb-3">
+            <label htmlFor="urlImageBanner" class="form-label">urlImageBanner</label>
+            <input [(ngModel)]="tareaNueva.urlImageBanner" name="urlImageBanner" type="text" id="urlImageBanner" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="textCaption" class="form-label">textCaption</label>
+            <input [(ngModel)]="tareaNueva.textCaption" name="textCaption" type="text" id="textCaption" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="descripcionImagen" class="form-label">descripcionImagen</label>
+            <input [(ngModel)]="tareaNueva.descripcionImagen" name="descripcionImagen" type="text" id="descripcionImagen" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="ordenSlider" class="form-label">ordenSlider</label>
+            <input [(ngModel)]="tareaNueva.ordenSlider" name="ordenSlider" type="number" id="ordenSlider" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="postDatos()">Guardar</button>
+    </form>     
+</div>   

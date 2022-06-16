@@ -1,0 +1,31 @@
+<div class="container">
+    <br>
+    <button class="btn btn-primary" [routerLink]="['/agregar']">Agregar</button>
+    <hr>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">urlImageBanner</th>
+                <th scope="col">textCaption</th>
+                <th scope="col">descripcionImagen</th>
+                <th scope="col">ordenSlider</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let info of lista">
+                <td>{{info.urlImageBanner}}</td>
+                <td>{{info.textCaption}}</td>
+                <td>{{info.descripcionImagen}}</td>
+                <td>{{info.ordenSlider}}</td>
+                <td>
+                    <div class="mb-3">
+                        <button class="btn btn-danger" (click)="eliminar(info.id)">Delete</button>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-dark" [routerLink]="['/editar/',info.id]">Update</button>
+                    </div>
+                </td>
+            </tr>               
+        </tbody>
+        </table>
+</div>
